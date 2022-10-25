@@ -1,0 +1,480 @@
+.main {
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+
+    &__section {
+        // border:2px solid black;
+        width:100%;
+
+        &--description {
+            display:flex;
+            flex-wrap: wrap;
+        };
+
+// Section SERVICES (mandarin & cherries)
+        &--services {
+
+            @include tablet-portrait {
+                // display: flex;
+                // flex-wrap: wrap;
+                // grid template more efficient for ipad mini size
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-auto-rows: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+            };
+
+            & article {
+                height: 60rem;
+
+                @include tablet-portrait {
+                    height: fit-content;
+                    flex:50%;
+                    padding: 0;
+                };
+
+                @include laptop {
+                    aspect-ratio: 6/5;
+                }
+
+                
+
+                .article__content--services {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    @include tablet-portrait {
+                        justify-content: flex-start;
+                        padding-top:50%;
+                    }
+                    // bottom:0;
+                };
+
+                &:first-child {
+                background: url("../../images/pictures/cherries-desktop.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 0;
+
+                // @include tablet-portrait {
+                    
+                // }
+                
+                };
+                &:nth-child(2) {
+                    background: url("../../images/pictures/mandarin-desktop.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 0;
+                // resolve trouble with ipad mini size
+                    @include tablet-portrait {
+                        height:100%;
+                    }
+                }
+            }
+        };
+
+        &--testimonials {
+            padding-bottom: 8.6rem;
+
+            @include tablet-portrait {
+                padding-bottom: 5rem;
+            }
+
+            @include laptop {
+                width:100vw;
+                padding: 11.11% 11.45%;
+            }
+
+            // testimonials articles container (without title)
+            .main__section__testimonialsarticles {
+
+                @include tablet-portrait {
+                    display:flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width:fit-content;
+                }
+
+                @include laptop {
+                    margin:0 auto;
+                }
+
+            }
+        }
+
+        &--bottompics {
+            width:100vw;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        // = "<h4>client testimonials"
+        &__subtitle {
+            margin-top: 6.4rem;
+            margin-block-end:0;
+            color:var(--color-lightgrey);
+            letter-spacing: 0.4rem;
+            font-size: 1.6rem;
+            font-family: var(--font-family-main);
+            font-weight: var(--font-weight-black);
+            text-align: center;
+            text-transform: uppercase;
+
+            @include tablet-portrait {
+                margin-top: 5rem;
+            }
+
+            @include laptop {
+                margin-top:0;
+            }
+        }
+
+        &__article {
+            width:100%;
+            display:flex;
+            flex-wrap: wrap-reverse;
+            font-size: 0;
+
+            &:nth-child(even) {
+                flex-wrap: wrap;
+            };
+
+            &--testimonials {
+                padding-top: 6.4rem;
+                display:flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                @include tablet-portrait {
+                    padding-top: 4rem;
+                    flex:30%;
+                }
+
+                @include laptop {
+                    padding-top: 8.1rem;
+                }
+
+
+                &:nth-child(even) {
+                    flex-wrap: nowrap;
+
+                    @include laptop {
+                        margin: 0 3rem;
+                    }
+                    
+                };
+
+                
+
+            }
+
+            
+
+
+            // text blocks container main section
+            .article__content {
+                display:flex;
+                flex-flow: column nowrap;
+                justify-content:space-evenly;
+                align-items: center;
+                padding: 6.4rem 0;
+                // height: 40.37rem;
+                // flex:50%;
+
+                @include tablet-portrait {
+                    min-height: 80%;
+                    height: fit-content;
+                    align-self: center;
+                    width: 61.8%;
+                    // height: 47.5%;
+                    flex:50%;
+                    padding: 0;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    padding-left: 5%;
+                    
+                };
+
+                @include laptop {
+                    min-height: 50%;
+                    padding-left: 10%;
+
+                }
+
+                // title + text cherry/mandarin section
+                &--services {
+                    padding: 0 0 10%;
+
+                    @include tablet-portrait{
+                        height: 100%;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 0 0 3%;
+
+                    };
+
+                    @include laptop {
+                        padding: 0 0 10%;
+                    }
+                };
+
+                &--testimonials {
+                    padding: 0;
+
+                    @include tablet-portrait {
+                        align-items: center;
+                        width:fit-content;
+                    }
+                }
+
+                &__title {
+                    font-family: var(--font-family-main);
+                    font-size: 3.2rem;
+                    font-weight: var(--font-weight-black);
+                    padding: 1rem 2rem;
+                    text-align: center;
+                    line-height: 4rem;
+                    color: var(--color-dark);
+                    height: fit-content;
+                    margin:0 auto;
+
+                    @include tablet-portrait {
+                        text-align: left;
+                        line-height: 3.8rem;
+                        padding:0;
+                        margin:0;
+                        width: 80%;
+                      };
+
+                    @include laptop {
+                        margin: 0;
+                        width: 80%;
+                        font-size: 4rem;
+                        line-height: 4.9rem;
+                    };
+
+                };
+
+                &__subtitle {
+                    @extend .article__content__title;
+
+                    &--gd {
+                        color: var(--color-darkgreen);
+                    };
+
+                    &--ph {
+                        color: var(--color-darkblue75);
+                    };
+
+                    @include tablet-portrait {
+                        text-align: center;
+                    }
+
+                    @include laptop {
+                        font-size: 2.8rem;
+                        margin-bottom: 2rem;
+
+                    };
+
+                    &--testimonialname {
+                        line-height: 1.8rem;
+                        padding:0;
+                        font-size: 1.8rem;
+                    }
+                };
+
+                &__text {
+                    font-family: var(--font-family-second);
+                    font-size: 1.8rem;
+                    font-weight: var(--font-weight-semibold);
+                    color: var(--color-grey);
+                    text-align: center;
+                    padding:0 3rem;
+                    line-height: 3rem;
+                    height: fit-content;
+                    margin:2.4rem  auto 3.2rem;
+
+                    @include tablet-portrait {
+                        line-height: 2.5rem;
+                        text-align: left;
+                        margin: 0;
+                        padding: 0;
+                        width:95%;
+                    };
+
+                    @include laptop {
+                        width: 90%;
+                        line-height: 3rem;
+                    };
+
+                    &--services {
+
+                        font-size: 1.6rem;
+                        padding: 0 2rem;
+                        color: var(--color-darkgreen);
+                        
+                        &:last-child {
+                            color: var(--color-darkblue);
+                        }
+
+                        @include tablet-portrait {
+                            text-align: center;
+                            margin-top:1rem;
+                        }
+
+                        @include laptop {
+                            margin-top:0;
+                            width: 55%;
+                            line-height: 3rem;
+                        };
+                    }
+
+                    &--testimonials {
+                        color: var(--color-greyquotes);
+                        font-size: 1.8rem;
+                        line-height: 3.2rem;
+                        margin: 3.2rem 0;
+
+                        @include tablet-portrait {
+                            font-size: 1.6rem;
+                            line-height: 2.8rem;
+                            width: 90%;
+                            text-align: center;
+                        }
+
+                        @include laptop {
+                            font-size: 1.8rem;
+                            width: 100%;
+                            margin: 5.8rem 0 6.9rem;
+                        }
+                    }
+
+                    q {
+                        quotes: none;
+                        text-indent: 0;
+                    }
+                };
+
+                &__link {
+                    font-family: var(--font-family-main);
+                    font-size: 1.5rem;
+                    color: var(--color-dark);
+                    text-transform: uppercase;
+                    position:relative;
+                    height: fit-content;
+                    margin:0 auto;
+
+                    @include tablet-portrait {
+                        // border: 2px solid rgb(82, 238, 34);
+                        text-align: left;
+                        margin:0;
+                    }
+
+                    &::after {
+                        z-index:-1;
+                        position: absolute;
+                        content: "";
+                        height: 1rem;
+                        width:114%;
+                        background: hsla(51, 100%, 49%, 0.25);
+                        left:-7%;
+                        bottom:-20%;
+                        border-radius: 1rem;
+                        
+                    };
+
+                    &:hover {
+                        &::after {
+                        background: hsla(51, 100%, 49%, 1);
+                        };
+                    };
+
+                    &--pink {
+                        &::after {
+                            background:hsla(7, 99%, 70%, 0.25)
+                        };
+
+                        &:hover {
+                            &::after {
+                                background: hsla(7, 99%, 70%, 1)
+                            };
+                        };
+                    };
+
+                    
+
+                    & a {
+                        text-decoration: none;
+                        color: var(--color-dark);
+                        // box-shadow: 0 1rem hsla(51, 100%, 49%, 1);
+                    }
+                };
+
+                &__testimonialprofession {
+                    font-size: 1.4rem;
+                    line-height: 2.5rem;
+                    margin: 0.9rem auto 0;
+                    font-family: var(--font-family-second);
+                    color: var(--color-lightgrey);
+                }
+
+            };
+
+            .article__picture {
+                width:100%;
+                max-height: fit-content;
+                @include tablet-portrait {
+                    width:50%;
+                };
+                & figure {
+                    margin:0;
+
+                    & img{
+                        width:100%
+                    } 
+
+                }
+
+                &--testimonials {
+                    height:fit-content;
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+                
+            }
+
+        };
+
+        &__picture {
+            position: relative;
+            margin:0;
+            aspect-ratio: 1/1;
+            width:50%;
+            overflow-y: hidden;
+
+            @include tablet-portrait {
+                position: initial;
+                width:25%;
+                height:auto;
+                aspect-ratio: initial;
+            }
+
+            .img__bottompics {
+                position: absolute;
+                width:100%;
+                transform: translateY(-10%);
+                // overflow-y: hidden;
+                // height:100%;
+                // aspect-ratio: 1/1;
+
+                @include tablet-portrait {
+                    position:initial;
+                    height:100%;
+                    transform: initial;
+                }
+            }
+        }
+
+    };
+};
