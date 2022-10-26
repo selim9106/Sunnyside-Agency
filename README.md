@@ -38,6 +38,9 @@ I added a little script (Vanilla JS) to handle the *toggling* mobile burger menu
   + svg icons
   + Flex-box (+ Grid) model
 
+- JavaScript
+  + Toggle function (for mobile burger nav)
+  + [Animate on Scroll library](https://michalsnik.github.io/aos/)
 
 ## Note
 I used the [*Vite*](https://vitejs.dev/) front-end build tool. Not that it's that relevant in this case but I wish to make its use a good habit.
