@@ -163,6 +163,9 @@ html {
   .header__nav__item a {
     color: white;
   }
+  .header__nav__item a:hover {
+    color: hsla(0deg, 0%, 100%, 0.25);
+  }
 }
 .header__nav__item a:hover, .header__nav__item a:active {
   color: black;
@@ -170,6 +173,9 @@ html {
 @media (min-width: 600px) {
   .header__nav__item a:hover, .header__nav__item a:active {
     color: white;
+  }
+  .header__nav__item a:hover:hover, .header__nav__item a:active:hover {
+    color: hsla(0deg, 0%, 100%, 0.5);
   }
 }
 .header__nav__item--contact {
@@ -184,7 +190,16 @@ html {
 }
 @media (min-width: 600px) {
   .header__nav__item--contact {
+    background: hsl(0deg, 0%, 100%);
+    color: #000;
+  }
+  .header__nav__item--contact:hover {
     background: hsla(0deg, 0%, 100%, 0.25);
+  }
+  .header__nav__item--contact a {
+    color: #000;
+  }
+  .header__nav__item--contact a:hover {
     color: white;
   }
 }
@@ -195,12 +210,6 @@ html {
 }
 .header__nav__item--contact a, .header__nav__item--contact a:hover, .header__nav__item--contact a:visited {
   text-decoration: none;
-  color: black;
-}
-@media (min-width: 600px) {
-  .header__nav__item--contact a, .header__nav__item--contact a:hover, .header__nav__item--contact a:visited {
-    color: white;
-  }
 }
 .header__nav__item--contact a:active {
   color: white;

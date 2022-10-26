@@ -11,6 +11,12 @@
     <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/css/normalize.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/css/style.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
    <!-- fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +28,7 @@
   <body>
 <header class="header">
   <div class="header__logocontainer">
-    <img id="headerlogo" src="./assets/images/icons/sunnyside.svg" alt="Sunnyside"></img>
+    <img id="headerlogo" src="./assets/images/icons/sunnyside.svg" alt="Sunnyside">
   </div>
   <nav class="header__nav">
     <ul class="header__nav__list">
@@ -44,7 +50,7 @@
     </span>
   </div>
 <section class="header__section">
-  <h1 class="header__section__title">We are creatives</h1>
+  <h1 class="header__section__title animate__backInDown">We are creatives</h1>
   <div class="header__section__logo" id="arrowcontainer">
     <a href="#maincontent">
       <img id="arrownavigation" src="./assets/images/pictures/arrow.svg" alt="arrow-navigation">
@@ -63,12 +69,12 @@
   <section class="main__section main__section--description" id="maincontent">
 
     <article class="main__section__article">
-      <div class="article__content">
+      <div class="article__content" data-aos="fade-right">
           <h2 class="article__content__title">Transform your brand</h2>
           <p class="article__content__text">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
           <h5 class="article__content__link article__content__link--yellow"><a href="#">Learn more</a></h5>
       </div>
-      <div class="article__picture">
+      <div class="article__picture" data-aos="fade-left">
         <figure class="article__picture__block">
           <img src="./assets/images/pictures/egg.png" alt="egg">
         </figure>
@@ -77,12 +83,12 @@
       
 
     <article class="main__section__article">
-      <div class="article__picture">
+      <div class="article__picture" data-aos="fade-left">
         <figure class="article__picture__block">
           <img src="./assets/images/pictures/glass.png" alt="glass">
         </figure>
       </div>
-      <div class="article__content">
+      <div class="article__content" data-aos="fade-right">
         <h2 class="article__content__title">Stand out to the right audience</h2>
         <p class="article__content__text">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
         <h5 class="article__content__link article__content__link--pink"><a href="#">Learn more</a></h5>
@@ -91,7 +97,7 @@
     </article>
   </section>
 
-  <section class="main__section--services">
+  <section class="main__section--services" data-aos="fade-up">
     <!-- <figure class="main__section__blockpic">
       <img src="" alt="" class="blockpic__picture">
     </figure> -->
@@ -116,7 +122,7 @@
 
   </section>
 
-  <section class="main__section--testimonials">
+  <section class="main__section--testimonials" data-aos="fade-down">
 
     <h4 class="main__section__subtitle main__section__subtitle--testimonials">Client Testimonials</h4>
 
@@ -157,7 +163,7 @@
     </div>
   </section>
 
-  <section class="main__section--bottompics">
+  <section class="main__section--bottompics" data-aos="fade-up">
     <figure class="main__section__picture main__section__picture--bottompics"><img src="./assets/images/pictures/milk-bottles.png"  alt="milkbottles" class="img__bottompics"></figure>
     <figure class="main__section__picture main__section__picture--bottompics"><img src="./assets/images/pictures/orange-plate.png" alt="orange-plate" class="img__bottompics"></figure>
     <figure class="main__section__picture main__section__picture--bottompics"><img src="./assets/images/pictures/icecone.png" alt="icecone" class="img__bottompics"></figure>
@@ -236,6 +242,7 @@
 
     <!-- <div id="app"></div> -->
     <script type="module" src="./assets/scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 
 </html>
