@@ -66,7 +66,6 @@
           aspect-ratio: 0;
         };
         
-        
         &.active {
             display:block;
         };
@@ -81,8 +80,6 @@
           border-bottom-color: white;
           border-top: 0;
           border-right: 0;
-          // margin-left: -10px;
-          // margin-top: -30px;
 
           @include tablet-portrait {
             display:none;
@@ -110,9 +107,9 @@
             flex-flow: row nowrap;
             height: fit-content;
             color: white;
-            
           };
         };
+
         &__item {
           margin: min(5.24%, 16px) 0;
           font-size:2rem;
@@ -124,6 +121,7 @@
           & a, a:hover, a:visited {
             text-decoration: none;
           };
+
           & a {
             color: var(--color-grey);
 
@@ -135,6 +133,7 @@
               }
             }
           };
+
           & a:hover, & a:active {
             color: black;
 
@@ -142,6 +141,9 @@
               color: white;
               &:hover {
                 color: hsla(0, 0%, 100%, 0.5)
+              }
+              &:last-child:hover {
+                color: hsla(0, 0%, 100%, 1)
               }
             }
           };
@@ -162,13 +164,14 @@
 
               &:hover {
                 background: hsla(0, 0%, 100%, 0.25);
+
+                & a {
+                  color:white
+                }
                 }
 
               & a {
                 color: #000;
-                &:hover {
-                  color: white;
-                  }
               }
             }
 
@@ -183,13 +186,8 @@
             & a:active {
                 color:white;
             };
-  
-  
           }
         };
-  
-      
-  
     };
 
     &__section {
@@ -197,7 +195,6 @@
         top: 25%;
         margin: 0 auto;
         align-self: center;
-        // top: 130px;
         height: 50%;
         display: flex;
         flex-direction: column;
@@ -213,8 +210,8 @@
           top:30%;
           justify-content: flex-start;
         };
+
         &__title {
-            
             margin: 0 auto;
             font-family: var(--font-family-main);
             font-size: 4rem;
@@ -231,12 +228,9 @@
               font-size: 5.6rem;
             };
         };
-
     }
-    
   };
   
-
   // Burgermenu
   #bgmenu-btn {
     z-index: 90;
@@ -330,8 +324,7 @@
       margin-top: 0;
     }
   }
-
-
+  
   @keyframes infiniteUpAndDownDesktop {
     0% {
       margin-top: 0;

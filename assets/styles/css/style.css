@@ -177,6 +177,9 @@ html {
   .header__nav__item a:hover:hover, .header__nav__item a:active:hover {
     color: hsla(0deg, 0%, 100%, 0.5);
   }
+  .header__nav__item a:hover:last-child:hover, .header__nav__item a:active:last-child:hover {
+    color: hsl(0deg, 0%, 100%);
+  }
 }
 .header__nav__item--contact {
   background: var(--color-yellow);
@@ -196,11 +199,11 @@ html {
   .header__nav__item--contact:hover {
     background: hsla(0deg, 0%, 100%, 0.25);
   }
+  .header__nav__item--contact:hover a {
+    color: white;
+  }
   .header__nav__item--contact a {
     color: #000;
-  }
-  .header__nav__item--contact a:hover {
-    color: white;
   }
 }
 @media (min-width: 1200px) {
